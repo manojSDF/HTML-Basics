@@ -1,0 +1,73 @@
+<html>
+<head>
+<script>
+
+function sum() 
+{
+var acno,lno,years,tinter=0,tamou=0.0,monthin=0,ir=0.0;
+
+acno=Number(document.getElementById("acno").value);
+lno=Number(document.getElementById("lno").value);
+years=Number(document.getElementById("years").value);
+
+
+if(lno>50000)
+{
+ir=12/100;
+}
+else if(lno>25000)
+{
+ir=10/100;
+}
+else if(lno>10000)
+{
+ir=8/100;
+}
+else
+{
+ir=5/100;
+}
+
+tinter=tamou*ir*years;
+tamou=lno+tinter;
+monthin=tamou/(years*12);
+
+document.getElementById("tinter").value=tinter;
+document.getElementById("tamou").value=tamou;
+document.getElementById("monthin").value=monthin;
+
+}
+
+
+
+
+function cls()
+{
+
+document.getElementById("acno").value="";
+document.getElementById("lno").value="";
+document.getElementById("years").value="";
+document.getElementById("tinter").value="";
+document.getElementById("tamou").value="";
+document.getElementById("monthin").value="";
+}
+</script>
+</head>
+
+<body>
+
+Enter The Account No :<input id ="acno"></br>
+Enter The Loan Number :<input id ="lno"></br>
+Enter Period :<input id ="years"></br>
+
+Total Interest :<input id ="tinter"></br>
+Total Amount :<input id ="tamou"></br>
+Monthly Instalment :<input id ="monthin"></br>
+
+
+
+<button onclick="sum()">Calculate</button>
+<button onclick="cls()">Clear</button>
+
+</body>
+</html>

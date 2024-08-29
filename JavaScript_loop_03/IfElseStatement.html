@@ -1,0 +1,58 @@
+<html>
+<head>
+<script>
+
+function sum() 
+{
+var sub1,sub2,tot=0,av=0.0,res='';
+
+sub1=Number(document.getElementById("sub1").value);
+sub2=Number(document.getElementById("sub2").value);
+
+tot=sub1+sub2;
+av=tot/2;
+
+if(av>=50)
+{
+res='Pass';
+}
+else
+{
+res='Fail';
+}
+
+document.getElementById("tot").value=tot;
+document.getElementById("av").value=av;
+document.getElementById("res").value=res;
+
+}
+
+function cls()
+{
+
+document.getElementById("sub1").value="";
+document.getElementById("sub2").value="";
+
+document.getElementById("tot").value="";
+document.getElementById("av").value="";
+}
+</script>
+</head>
+
+<body>
+
+
+Enter the Subject 01 Mark:<input id ="sub1"></br>
+Enter the Subject 02 Mark:<input id ="sub2"></br>
+
+
+
+Total:<input id ="tot"></br>
+Average:<input id ="av"></br>
+Result:<input id="res"></br>
+
+<button onclick="sum()">Result</button>
+<button onclick="cls()">clear</button>
+
+</body>
+</html>
