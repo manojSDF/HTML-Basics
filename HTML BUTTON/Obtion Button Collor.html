@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script>
+
+
+				function check()
+				{
+					if(document.getElementById("red").checked==true)
+					{
+						co="Red Color"
+					}
+			
+					if(document.getElementById("blue").checked==true)
+					{
+						co="Blue Color"
+					}
+	
+					if(document.getElementById("green").checked==true)
+					{
+						co="Green Color"
+					}
+					
+					alert("you Select    "+co);
+				}
+
+		</script>
+	</head>
+	<body>
+		<form>
+
+			What color do you prefer?<br>
+
+			<input type="radio"name="colors"id ="red">Red<br>
+			<input type="radio"name="colors"id ="blue">Blue<br>
+			<input type="radio"name="colors"id ="green">Green<br>
+			<button type="button" onclick="check()"> Check </button>
+   
+		</form>
+   </body>
+</html>

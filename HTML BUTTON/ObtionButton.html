@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+
+	function checkButton(){
+	
+		var getSelectedValue = document.querySelector('input[name="season"]:checked');
+		
+		
+		if (getSelectedValue.value=='core2do')
+				{
+				pr=10000;
+				}
+		else if getSelectedValue.value=='corei3')
+				{
+				pr=20000;
+				}
+		else if(getSelectedValue.value=='corei5')
+				{
+				pr=25000;
+				}
+		else if(getSelectedValue.value=='corei7')
+				{
+				pr=30000;
+				}
+						
+				
+window.alert("your selected processor is:"+pr);
+
+
+}
+
+</script>
+</head>
+<body>
+
+<br><b>choose your favorite processor:</br><br>
+
+<input type="radio" name="season" id="summer" value="core2do">Core2Dou <br>
+<input type="radio" name="season" id="winter" value="corei3">Corei3 <br>
+<input type="radio" name="season" id="rainy"  value="corei5">Corei5 <br>
+<input type="radio" name="season" id="autum"  value="corei7">Corei7 <br><br>
+
+<button type="button"on click="checkButton()">Submit</button>
+
+<h3 id ="disp"style="color:green"> </h3>
+<h4 id="error"style="color:red"> </h4>
+
+</body>
+</html>

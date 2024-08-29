@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script>
+			function convert()
+				{
+				
+				var system=0;
+				var m=0.0 ,c=0.0 ,k=0.0 ,i=0.0 ,f=0.0;
+
+					system=Number(document.getElementById("system").value);
+				
+					if(document.getElementById("mm").checked==true)
+					{
+						m = system/1000;
+					}
+			
+					if(document.getElementById("cm").checked==true)
+					{
+						c = system/100;
+					}
+	
+					if(document.getElementById("km").checked==true)
+					{
+						K = system*1000;
+					} 
+					
+					if(document.getElementById("inch").checked==true)
+					{
+						i = system*38;
+					}
+					
+					if(document.getElementById("feet").checked==true)
+					{
+						f = system/25;
+					}
+					
+					alert(i);
+				}
+				
+		</script>
+	</head>
+<body>
+		<form>
+		
+			<h1>Length Convert</h1><br>
+			<h2>Enter Length (Meater) :<input id ="system"></h2></br>
+			<input type="radio"name="length"id ="red">MM<br>
+			<input type="radio"name="length"id ="blue">CM<br>
+			<input type="radio"name="length"id ="green">KM<br>
+			<input type="radio"name="length"id ="red">Inch<br>
+			<input type="radio"name="length"id ="blue">Feet<br><br>
+			
+			<button type="button" onclick="convert()">Convert</button>
+   
+		</form>
+		
+</body>
+</html>

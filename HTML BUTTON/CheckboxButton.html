@@ -1,0 +1,162 @@
+<html>
+<head>
+<script>
+
+function clearValue()
+
+{
+document.getElementById("check1").checked = false;
+document.getElementById("check2").checked = false;
+document.getElementById("check3").checked = false;
+document.getElementById("check4").checked = false;
+document.getElementById("check5").checked = false;
+document.getElementById("check6").checked = false;
+}
+
+function getCheckboxValue()
+{
+ var lg1,lg2,lg3,lg4,lgr5,lg6;
+ 
+ var lg1pr=0,lg2pr=0,lg3pr=0,lg4pr=0,lg5pr=0,lg6pr=0;
+ 
+ var l1= document.getElementById("check1");
+ var l2= document.getElementById("check2");
+ var l3= document.getElementById("check3");
+ var l4= document.getElementById("check4");
+ var l5= document.getElementById("check5");
+ var l6= document.getElementById("check6");
+ 
+ var c="\n";
+ 
+ if (l1.checked ==true)
+ {
+ var pl1 = document.getElementById("check1").value+c;
+ lg1pr=5000;
+ }
+ 
+ else
+ {
+ pl1="";
+ lg1pr=0;
+ }
+ 
+ if (l2.checked== true)
+ {
+ lg2pr=3000;
+ var pl2=document.getElementById("check2").value+c;
+ }
+ 
+ else
+ {
+ pl2="";
+ c="";
+ lg2pr=0;
+ }
+ 
+ if(l3.checked == true)
+ {
+ var pl3 = document.getElementById("check3").value+c;
+ lg3pr=2500;
+ }
+ 
+ else
+ {
+ pl3="";
+ c="";
+ lg3pr=0;
+ }
+ 
+ if (l4.checked==true)
+ {
+ lg4pr=2000;
+ var pl4 = document.getElementById("check4").value+c;
+ }
+ 
+ else
+ {
+ pl4="";
+ c="";
+ lg4pr=0;
+ }
+ 
+ if (l5.checked == true)
+ {
+ lg5pr=1500;
+ var pl5 = document.getElementById("check5").value+c;
+ }
+ 
+ else 
+ {
+ pl5="";
+ c="";
+ lg5pr=0;
+ }
+ 
+ if(l6.checked==true)
+ {
+ lg6pr=1000;
+ var pl6 = document.getElementById("check6").value+c;
+ }
+ 
+ else 
+ {
+ pl6="";
+ c="";
+ lg6pr=0;
+ }
+ 
+ var res = pl1+pl2+pl3+pl4+pl5+pl6;
+ var free= lg1pr+lg2pr+lg3pr+lg4pr+lg5pr+lg6pr;
+
+ window.alert("Your Selected Languages Are :- "+res+" And total course free Is :- "+free+"");
+ 
+ }
+ 
+ </script>
+ </head>
+ <body>
+ 
+ <h2 style ="color:green">Create a checkbox and get its value</h2>
+ <h3>Select the Programing Language to Learn</h3>
+ 
+ <table border ="1";
+ 
+ <tr>
+ <td> Java : </td><td><input type="checkbox" id ="check1" value ="Java"> </td>
+ </tr>
+ 
+ <tr>
+ <td>Php :</td><td><input type="checkbox" id="check2" value ="Php"> </td>
+ </tr>
+ 
+ <tr>
+ <td>Angular :</td><td><input type="checkbox" id="check3" value ="Angular"> </td>
+ </tr>
+ 
+ <tr>
+ <td>Css :</td><td><input type="checkbox" id="check4" value ="Css"> </td>
+ </tr>
+ 
+ <tr>
+ <td>Python :</td><td><input type="checkbox" id="check5" value ="Python"> </td>
+ </tr>
+ 
+ <tr>
+ <td>Android :</td><td><input type="checkbox" id="check6" value ="Android"> </td>
+ </tr>
+ 
+ <td><button type ="button" onclick="getCheckboxValue()">Submit</button></td>
+ <td><button type ="button" onclick="clearValue()">Clear</button></td>
+ 
+ </tr>
+ 
+ </table>
+ <h4 style ="color:green" id ="result"></h4>
+ 
+ </body>
+ </html> 
+ 
+ 
+ 
+ 
+ 

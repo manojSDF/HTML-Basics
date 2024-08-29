@@ -1,0 +1,128 @@
+<html>
+<head>
+<script>
+
+function clearValue()
+{
+
+document.getElementById("check1").checked = false;
+document.getElementById("check2").checked = false;
+document.getElementById("check3").checked = false;
+document.getElementById("check4").checked = false;
+}
+
+function getCheckbox()
+{
+
+var lg1pr=0,lg2pr=0,lg3pr=0,lg4pr=0;
+
+var system=0;
+
+ system=Number(document.getElementById("system").value);
+
+ var l1= document.getElementById("check1");
+ var l2= document.getElementById("check2");
+ var l3= document.getElementById("check3");
+ var l4= document.getElementById("check4");
+ 
+ var c="\n";
+
+if (l1.checked ==true)
+ {
+ var pl1 = document.getElementById("check1").value+c;
+ lg1pr=5000;
+ }
+
+else
+ {
+ pl1="";
+ lg1pr=0;
+ }
+
+if (l2.checked== true)
+ {
+ lg2pr=15000;
+ var pl2=document.getElementById("check2").value+c;
+ }
+ 
+ else
+ {
+ pl2="";
+ c="";
+ lg2pr=0;
+ }
+
+ if(l3.checked == true)
+ {
+ var pl3 = document.getElementById("check3").value+c;
+ lg3pr=4000;
+ }
+ 
+ else
+ {
+ pl3="";
+ c="";
+ lg3pr=0;
+ }
+
+
+if (l4.checked==true)
+ {
+ lg4pr=5000;
+ var pl4 = document.getElementById("check4").value+c;
+ }
+ 
+ else
+ {
+ pl4="";
+ c="";
+ lg4pr=0;
+ }
+
+
+var count=lg1pr+lg2pr+lg3pr+lg4pr;
+
+
+var cal=count+system;
+
+window.alert("Total Price Is: "+cal+"");
+
+}
+ 
+
+ </script>
+ </head>
+ <body>
+
+<h2 style ="color:green">Computer Price Calculator</h><br>
+
+Enter The System No :<input id ="system"></br>
+
+<h2 style ="color:blue">Select Multimedia</h2>
+
+<table border="1";
+
+<tr>
+<td>DVD Rom:</td><td><input type="checkbox" id="check1" value ="DVD Rom"</td>
+</tr>
+
+<tr>
+<td>Video Card:</td><td><input type="checkbox" id="check2" value ="Video Card"</td>
+</tr>
+
+<tr>
+<td>TV Card:</td><td><input type="checkbox" id="check3" value ="Tv Card"</td>
+</tr>
+
+<tr>
+<td>Sub Woofer:</td><td><input type="checkbox" id="check4" value ="Sub Woofer"</td>
+</tr>
+
+
+<td><button type ="button" onclick="getCheckbox()">Calculate</button></td>
+
+<td><button type ="button" onclick="clearValue()">Clear</button></td>
+
+
+ </body>
+ </html> 
